@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Values from "values.js";
 
-const Form = () => {
+const Form = ({addColor}) => {
   const [color, setColor] = useState('#f15025');
-  const handleSubmit = (e) => { 
+  const handleSubmit = (e) => {
     e.preventDefault();
+    addColor(color);
   };
   return (
     <section className="container">
